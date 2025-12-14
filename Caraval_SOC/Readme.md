@@ -32,6 +32,36 @@ The verification flow is demonstrated using the **Housekeeping SPI (HKSPI) Direc
 - Stable internet connection
 
 ---
+## Task 1: Environment Setup
+
+### Purpose
+
+The purpose of this task is to establish a stable and reproducible verification environment capable of supporting both RTL simulation and gate-level simulation (GLS) for the Caravel SoC. A correctly configured environment is essential to ensure that any observed functional behavior is a result of the design itself and not influenced by tool or library inconsistencies.
+
+### Description
+
+The environment setup begins with the official **Caravel GitHub repository**, which serves as the reference design for this verification activity. The repository was reviewed to confirm the presence of all required RTL sources, design verification (DV) testbenches, and configuration files necessary for simulation and synthesis.
+
+The **Sky130 Process Design Kit (PDK)** was installed and configured to provide access to standard cell libraries, Verilog timing models, and technology-specific files required during synthesis and gate-level simulation. Ensuring correct PDK integration is critical, as it directly impacts technology mapping and the functional accuracy of the gate-level netlist.
+
+Verification tools were then validated to confirm correct installation and compatibility with the Caravel workflow. The following tools were confirmed to be operational:
+
+- **Icarus Verilog (iverilog)** for compiling RTL and gate-level designs  
+- **vvp** for executing compiled simulations and observing runtime behavior  
+- **Verilator** (optional) for RTL analysis and consistency checks  
+
+Each tool was tested within the configured environment to ensure proper interaction with Caravel source files and Sky130 libraries. This step helps eliminate toolchain-related issues that could otherwise surface during synthesis or long simulation runs.
+
+### Expected Outcome
+
+Upon completion of this task, the following conditions are satisfied:
+
+- The Caravel repository is correctly cloned and structured
+- Sky130 PDK paths are properly configured and accessible
+- Simulation and synthesis tools execute reliably without configuration errors
+- The environment is fully prepared for accurate RTL and GLS verification
+
+Successful completion of this task establishes a solid foundation for all subsequent verification steps.
 
 ## Clone Caravel Repository
 
