@@ -61,7 +61,16 @@ dv/hkspi/
 * RISC-V GCC path configured
 * SCL IO models linked
 * hkspi firmware compiled and loaded
+cd dv/hkspi
 
+#### commands to run 
+```
+make clean
+make        # generates hkspi.vvp
+vvp hkspi.vvp
+gtkwave hkspi.vcd hkspi_tb.v
+```
+> before running to command just make sure your folder whole path or file location are matching or not otherwise you will get module missing error and ensure to define module only once
 ### Expected Results
 
 * Successful console output
@@ -80,7 +89,33 @@ dv/hkspi/
 
 ---
 
-## 2. Gate-Level Simulation (GLS)
+## 2. Synthesis (Synopsys Design Compiler)
+- Edit `./synthesis/synth.tcl`:
+  - Point to the SCL cell libraries (.db), liberty files, and correct root paths.
+  - Set synthesis constraints (clk period, false paths if any).
+- Run from work folder:
+```bash
+cd synthesis/work_folder
+dc_shell -f ../synth.tcl
+```
+![synthesis]()
+
+
+- Expected outputs:
+  - Synthesized verilog: `vsdcaravel_synthesis.v` (in `synthesis/output/`)
+  - Area/power/timing reports (in `synthesis/report/`)
+ 
+
+
+Key metrics (example excerpts):
+- Total cell area: ~773k — 884k (varies per run)
+- Dynamic power: ~72–77 mW (tool dependent)
+- Leaf cell count: ~26k–31k (tool dependent)
+
+---
+
+
+## 3. Gate-Level Simulation (GLS)
 
 ### Objective
 
@@ -150,11 +185,6 @@ This avoids floating ground issues during GLS.
 * RTL and GLS waveforms are **functionally equivalent**
 * Minor delays observed in GLS due to gate-level timing
 * No functional mismatches detected
-
-**RTL vs GLS Waveform Comparison:**
-
-![RTL vs GLS](images/rtl_vs_gls.png)
-
 ---
 
 ## Repository Structure
@@ -207,5 +237,3 @@ This task successfully demonstrates **end-to-end verification** of the vsdcarave
 
 ---
 
-**Status:** ✅ Completed
-**Deadline:** Met (EOD)
