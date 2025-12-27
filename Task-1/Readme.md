@@ -81,11 +81,11 @@ gtkwave hkspi.vcd hkspi_tb.v
 
 **Console Output:**
 
-![RTL Console Output](images/rtl_console_output.png)
+![RTL Console Output](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task-1/Images/WhatsApp%20Image%202025-12-17%20at%202.28.49%20PM.jpeg)
 
 **RTL Waveform:**
 
-![RTL Waveform](images/rtl_waveform.png)
+![RTL Waveform](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task-1/Images/WhatsApp%20Image%202025-12-17%20at%202.28.49%20PM%20(1).jpeg)
 
 ---
 
@@ -98,7 +98,8 @@ gtkwave hkspi.vcd hkspi_tb.v
 cd synthesis/work_folder
 dc_shell -f ../synth.tcl
 ```
-![synthesis]()
+![synthesis](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task-1/Images/WhatsApp%20Image%202025-12-17%20at%202.28.49%20PM%20(2).jpeg)
+![rpt](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task-1/Images/WhatsApp%20Image%202025-12-17%20at%202.28.49%20PM%20(3).jpeg)
 
 
 - Expected outputs:
@@ -163,11 +164,12 @@ This avoids floating ground issues during GLS.
 
 **GLS Console Output:**
 
-![GLS Console Output](images/gls_console_output.png)
+![GLS Console Output](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task-1/Images/WhatsApp%20Image%202025-12-17%20at%202.28.50%20PM.jpeg)
+![](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task-1/Images/WhatsApp%20Image%202025-12-17%20at%202.28.50%20PM.jpeg)
 
 **GLS Waveform:**
 
-![GLS Waveform](images/gls_waveform.png)
+![GLS Waveform](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task-1/Images/WhatsApp%20Image%202025-12-17%20at%202.28.51%20PM.jpeg)
 
 ---
 
