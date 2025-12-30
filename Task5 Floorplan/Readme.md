@@ -636,7 +636,7 @@ icc2_shell -f floorplan.tcl | tee floorplan.log
 
 After successful execution, the design library is created, the floorplan is initialized.
 
-![Alt text](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task5%20Floorplan/Images/Screenshot%20from%202025-12-23%2017-29-40.png)
+![Alt text](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task5%20Floorplan/Images/Screenshot%20from%202025-12-30%2023-54-15.png)
 
 ---
 
@@ -649,7 +649,7 @@ start_gui
 ```
 
 ![Alt text](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task5%20Floorplan/Images/Screenshot%20from%202025-12-23%2018-05-09.png)
-![](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task5%20Floorplan/Images/Screenshot%20from%202025-12-30%2021-09-30.png)
+![](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task5%20Floorplan/Images/Screenshot%20from%202025-12-30%2023-54-28.png)
 
 Within the GUI, the floorplan initialization section shows the defined die and core dimensions. This confirms that the floorplan geometry matches the intended specification.
 
