@@ -190,7 +190,7 @@ vcs -full64 -sverilog -timescale=1ns/1ps \
 ./simv
 ```
 
-<img width="1680" height="1050" alt="gls_output" src="https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task_NoPOR_Final_GLS/lab%20work/gls%20simulation.png" />
+![](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task_NoPOR_Final_GLS/lab%20work/gls%20simulation.png)
 ![](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task_NoPOR_Final_GLS/lab%20work/gls%20simv%20log.png)
 ![](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task_NoPOR_Final_GLS/lab%20work/gls%20vcs%20log.png)
 ![](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task_NoPOR_Final_GLS/lab%20work/gtkwave%20gls.png)
