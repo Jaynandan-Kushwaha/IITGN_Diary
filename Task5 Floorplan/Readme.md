@@ -183,7 +183,7 @@ icc2_shell -f floorplan.tcl | tee floorplan.log
 
 After successful execution, the design library is created, the floorplan is initialized.
 
-![Alt text](images/task5_1.png)
+![Alt text](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task5%20Floorplan/Images/Screenshot%20from%202025-12-23%2017-29-40.png)
 
 ---
 
@@ -195,11 +195,9 @@ The ICC2 graphical interface can be launched using:
 start_gui
 ```
 
-![Alt text](images/task5_2.png)
+![Alt text](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task5%20Floorplan/Images/Screenshot%20from%202025-12-23%2018-05-09.png)
 
 Within the GUI, the floorplan initialization section shows the defined die and core dimensions. This confirms that the floorplan geometry matches the intended specification.
-
-![Alt text](images/task5_3.png)
 
 The die area is defined as 3588 × 5188 microns, and the core area is offset uniformly by 200 microns on all sides, ensuring sufficient spacing between core logic and IO pads.
 
@@ -215,7 +213,7 @@ place_pins -self
 
 This command distributes the top-level ports along the periphery without enforcing ordering or side constraints. While not final pin placement, this helps verify port visibility, orientation, and connectivity at the floorplan stage.
 
-![Alt text](images/task5_4.png)
+![Alt text](https://github.com/Jaynandan-Kushwaha/IITGN_Diary/blob/main/Task5%20Floorplan/Images/Screenshot%20from%202025-12-23%2018-23-25.png)
 
 ---
 
@@ -223,9 +221,12 @@ This command distributes the top-level ports along the periphery without enforci
 
 Do the following changes in pad_placement_constraint.tcl to place the IO pads properly:
 
-![Alt text](images/task5_5.png)
+create_io_guide -side right -pad_cells {analog_out_sel_buf comp_ena_buf comp_in_buf comp_ninputsrc_buf0 comp_ninputsrc_buf1 comp_pinputsrc_buf0 comp_pinputsrc_buf1 ext_clk_buf ext_clk_sel_buf ext_reset_buf flash_clk_buf flash_csb_buf} -line {{3588 5188} 5188}
 
-![Alt text](images/task5_6.png)
+
+create_io_guide -side left -pad_cells {flash_io_buf_0 flash_io_buf_1 flash_io_buf_2 flash_io_buf_3 gpio0 gpio1 gpio10 gpio11 gpio12 gpio13 gpio14} -line {{0 0} 5188}
+create_io_guide -side top -pad_cells {gpio15 gpio2 gpio3 gpio4 gpio5 gpio6 gpio7 gpio8 gpio9 irq_pin_buf opamp_bias_ena_buf} -line {{0 5188} 3588}
+create_io_guide -side bottom -pad_cells {opamp_ena_buf overtemp_buf overtemp_ena_buf pll_clk_buf rcosc_ena_buf rcosc_in_buf reset_buf ser_rx_buf ser_tx_buf spi_sck_buf trap_buf xtal_in_buf} -line {{3588 0} 3588}
 
 
 ## Summary
