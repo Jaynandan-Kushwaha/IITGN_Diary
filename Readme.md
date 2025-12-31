@@ -5,6 +5,18 @@
 # End-to-End Design Verification of a VSD-Caravel SoC with Technology Migration from SKY130 to SCL-180 and Physical Implementation of Raven SOC 
 
 ---
+##  Task-wise Repository Structure
+
+| Task       | Description                                     |
+| ---------- | ----------------------------------------------- |
+| **Task-1** | RTL & GLS of Caravel IC using SKY130            |
+| **Task-2** | RTL & GLS of Caravel IC using SCL180            |
+| **Task-3** | RTL & GLS using SCL180 with Synopsys-style flow |
+| **Task-4** | Caravel without dummy POR – final clean GLS     |
+| **Task-5** | Individual module testing of dvlike storage, Gpio, IRQ, mprj_ctrl  |
+| **Task-6** | Floorplanning of Raven SoC                      |
+| **Task-7** | Complete Physical Design of Raven SoC           |
+
 ## 📘 Project Overview
 
 This repository documents my **end-to-end System-on-Chip (SoC) design workflow** carried out during **Phase-2 of the RISC-V SoC Tapeout Program**, covering both **frontend verification** and **backend physical design** using industry-style methodologies.
