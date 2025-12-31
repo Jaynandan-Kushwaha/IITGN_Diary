@@ -1,0 +1,180 @@
+#------------------------------------------#
+name: core_ring
+region: 
+	Region: core area
+	Coordinate: {{300.0000 300.0000} {300.0000 4887.8000} {3287.9400 4887.8000} {3287.9400 300.0000} }
+
+Pattern Expression :
+	pattern: ring_pattern
+	nets: VDD VSS
+	parameters: 
+	offset: 3.0000 3.0000
+	offset start: boundary
+	skip_sides: 
+	side_offset: 
+	merge: undefined undefined
+	fill_gap: undefined
+
+Instantiated Pattern :
+Pattern Name: ring_pattern
+Type: Ring Pattern
+Symbolic Nets: VDD VSS 
+Ring Width:
+	{side: horizontal}{width: 5}
+	{side: vertical}{width: 5}
+Ring Layer:
+	{side: horizontal}{layer: metal10}
+	{side: vertical}{layer: metal9}
+Ring Spacing:
+	{side: horizontal}{spacing: 2}
+	{side: vertical}{spacing: 2}
+Corner Bridge: false
+Via Rules: 
+	{intersection: all} {via_master : {default}}
+Track Alignment: no alignment
+Parameters: 
+
+
+Extension: 
+	Nets: 
+	Layers: 
+	Sides: 
+	Direction: LRTB
+	Stop: inner-most ring
+
+
+Blockage: 
+#------------------------------------------#
+name: macro_core_ring
+region: 
+-macros {sram} 
+
+Pattern Expression :
+	pattern: macro_ring_pattern
+	nets: VDD VSS
+	parameters: 
+	offset: 10.0000 10.0000
+	offset start: boundary
+	skip_sides: 
+	side_offset: 
+	merge: undefined undefined
+	fill_gap: undefined
+
+Instantiated Pattern :
+Pattern Name: macro_ring_pattern
+Type: Ring Pattern
+Symbolic Nets: VDD VSS 
+Ring Width:
+	{side: horizontal}{width: 5}
+	{side: vertical}{width: 5}
+Ring Layer:
+	{side: horizontal}{layer: metal10}
+	{side: vertical}{layer: metal9}
+Ring Spacing:
+	{side: horizontal}{spacing: 2}
+	{side: vertical}{spacing: 2}
+Corner Bridge: false
+Via Rules: 
+	{intersection: all} {via_master : {default}}
+Track Alignment: no alignment
+Parameters: 
+
+
+Extension: 
+
+Blockage: 
+#------------------------------------------#
+name: s_mesh1
+region: 
+	Region: PG region pg_mesh_region
+	Coordinate: {{302.0000 302.0000} {302.0000 4524.9250} {592.5275 4524.9250} {592.5275 4800.9150} {302.0000 4800.9150} {302.0000 4885.8000} {3285.9400 4885.8000} {3285.9400 302.0000} }
+
+Pattern Expression :
+	pattern: pg_mesh1
+	nets: VDD VSS VSS VDD
+	parameters: 4 80 6 120 3.344 false
+	offset: undefined undefined
+	offset start: 10.0000 20.0000
+	pitch: undefined undefined
+	repeat: undefined undefined
+
+Instantiated Pattern :
+Pattern Name: pg_mesh1
+Type: Mesh Pattern
+Parameters: 
+Layers: 
+{ {vertical_layer : metal9} {width : {@w1 }} {spacing : interleaving} {trim : @t} {track_alignment : none}   {pitch : 80} {offset : 3.344} } 
+{ {horizontal_layer : metal10} {width : {@w2 }} {spacing : interleaving} {trim : @t} {track_alignment : none}   {pitch : 120} {offset : 3.344} } 
+Via Rules: 
+{intersection: all} {via_master : {default}}
+
+
+Extension: 
+	Nets: 
+	Layers: 
+	Sides: 
+	Direction: LRTB
+	Stop: inner-most ring
+
+
+Blockage: 
+#------------------------------------------#
+name: macro_con
+region: 
+-macros {sram} 
+
+Pattern Expression :
+	pattern: hm_pattern
+	nets: VDD VSS
+	parameters: 
+	offset: undefined undefined
+	offset start: boundary
+
+Instantiated Pattern :
+Pattern Name: hm_pattern
+Type: Macro Connection Pattern
+Pin Type: scattered pin
+Symbolic Nets: VDD VSS 
+Direction: not applicable
+Width: undefined undefined
+Layers: metal3 metal3 
+Spacing: not applicable
+Pitch: not applicable
+Number: not applicable
+Via Rules: 
+{intersection: all} {via_master : {default}}{between_parallel : false}
+Parameters: 
+
+
+Extension: 
+
+Blockage: 
+#------------------------------------------#
+name: rail_strat
+region: 
+	Region: PG region pg_mesh_region
+	Coordinate: {{302.0000 302.0000} {302.0000 4524.9250} {592.5275 4524.9250} {592.5275 4800.9150} {302.0000 4800.9150} {302.0000 4885.8000} {3285.9400 4885.8000} {3285.9400 302.0000} }
+
+Pattern Expression :
+	pattern: std_cell_rail
+	nets: VDD VSS
+	parameters: 
+	offset: undefined undefined
+	offset start: boundary
+
+Instantiated Pattern :
+Pattern Name: std_cell_rail
+Type: Standard Cell Rail Pattern
+Rail Width: 0.0600 0.0600 
+Rail Layers: metal1 
+Rail Shift: undefined undefined 
+Rail Masks: no_mask no_mask 
+Rail pin DRC option: false
+Mark as follow pin option: false
+Parameters: 
+
+
+Extension: 
+
+Blockage: 
+#------------------------------------------#
