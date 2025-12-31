@@ -5,6 +5,10 @@
 # End-to-End Design Verification of a VSD-Caravel SoC with Technology Migration from SKY130 to SCL-180 and Physical Implementation of Raven SOC 
 
 ---
+<img width="861" height="457" alt="image" src="https://github.com/user-attachments/assets/75a8d745-de36-42ef-bc51-797930635c62" />
+
+---
+
 ##  Task-wise Repository Structure
 
 | Task       | Description                                     |
